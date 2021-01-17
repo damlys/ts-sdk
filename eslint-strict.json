@@ -1,0 +1,28 @@
+{
+  "extends": "@damlys/ts-sdk/eslint-recommended",
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": false,
+        "allowHigherOrderFunctions": false,
+        "allowTypedFunctionExpressions": false
+      }
+    ],
+    "@typescript-eslint/explicit-member-accessibility": ["error", { "accessibility": "explicit" }],
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-parameter-properties": ["error"],
+    "@typescript-eslint/typedef": [
+      "error",
+      {
+        "arrayDestructuring": true,
+        "arrowParameter": true,
+        "memberVariableDeclaration": true,
+        "objectDestructuring": true,
+        "parameter": true,
+        "propertyDeclaration": true,
+        "variableDeclaration": true
+      }
+    ]
+  }
+}

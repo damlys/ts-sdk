@@ -1,0 +1,32 @@
+name: Continuous Delivery
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "**"
+  pull_request:
+    paths:
+      - "**"
+jobs:
+  job0:
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: development
+      NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: npm install
+      - run: npm run format:check
+
+      - if: github.event_name == 'push'
+        name: npm version patch
+        run: |
+          git config --global user.name "Robot"
+          git config --global user.email "robot@damlys.dev"
+          npm version patch --message "Release %s"
+          git push
+          git push --tags
+      - if: github.event_name == 'push'
+        run: npm publish
