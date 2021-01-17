@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "@damlys/ts-sdk": "*"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "src:exec": "ts-node ./src/bin/main.ts",
+    "src:repl": "ts-node-dev ./src/bin/main.ts",
+    "dist:exec": "node ./dist/bin/main.js",
+    "dist:repl": "nodemon ./dist/bin/main.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint './**/*.{ts,tsx}' --fix",
+    "lint:check": "eslint './**/*.{ts,tsx}'",
+    "test": "jest",
+    "test:coverage": "rm -rf ./coverage && jest --coverage",
+    "test:watch": "jest --watchAll",
+    "version": "add-keepachangelog-header ./CHANGELOG.md && git add ./CHANGELOG.md"
+  }
+}

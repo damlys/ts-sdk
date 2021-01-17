@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "extends": "@damlys/eslint-config/ts-strict",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": true
+    }
+  }
+}
