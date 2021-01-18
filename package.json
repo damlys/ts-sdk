@@ -1,6 +1,6 @@
 {
   "name": "@damlys/ts-sdk",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -47,7 +47,6 @@
   },
   "scripts": {
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "version": "node ./scripts/add-keepachangelog-header.js ./CHANGELOG.md && git add ./CHANGELOG.md"
+    "format:check": "prettier --check ."
   }
 }
