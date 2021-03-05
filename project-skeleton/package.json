@@ -8,11 +8,12 @@
     "src:repl": "ts-node-dev ./src/bin/main.ts",
     "dist:exec": "node ./dist/bin/main.js",
     "dist:repl": "nodemon ./dist/bin/main.js",
+    "dist:debug": "node --inspect='0.0.0.0:9229' ./dist/bin/main.js",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint './**/*.{ts,tsx}' --fix",
     "lint:check": "eslint './**/*.{ts,tsx}'",
-    "test": "jest",
+    "test": "jest --verbose",
     "test:coverage": "rm -rf ./coverage && jest --coverage",
     "test:watch": "jest --watchAll",
     "version": "add-keepachangelog-header ./CHANGELOG.md && git add ./CHANGELOG.md"
