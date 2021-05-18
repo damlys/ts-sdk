@@ -14,7 +14,6 @@
     "lint:check": "eslint './**/*.{ts,tsx}'",
     "test": "jest",
     "test:coverage": "rm -rf ./coverage && jest --coverage",
-    "test:watch": "jest --watchAll",
-    "version": "add-keepachangelog-header ./CHANGELOG.md && git add ./CHANGELOG.md"
+    "test:watch": "jest --watchAll"
   }
 }

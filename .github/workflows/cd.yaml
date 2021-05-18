@@ -23,8 +23,8 @@ jobs:
       - if: github.event_name == 'push'
         name: npm version patch
         run: |
-          git config --global user.name "Robot"
-          git config --global user.email "robot@damlys.dev"
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
           npm version patch --message "Release %s"
           git push
           git push --tags
