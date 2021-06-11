@@ -3,6 +3,7 @@
     "@damlys/ts-sdk": "*"
   },
   "scripts": {
+    "prepare": "husky install",
     "build": "rm -rf ./dist && tsc",
     "src:exec": "ts-node ./src/bin/main.ts",
     "src:repl": "ts-node-dev ./src/bin/main.ts",
@@ -14,6 +15,8 @@
     "lint:check": "eslint './**/*.{ts,tsx}'",
     "test": "jest",
     "test:coverage": "rm -rf ./coverage && jest --coverage",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "bump-version:prerelease": "standard-version --prerelease='rc'",
+    "bump-version:release": "standard-version"
   }
 }
